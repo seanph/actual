@@ -288,8 +288,8 @@ export const TransactionHeader = React.memo(
         <Cell value="Payee" width="flex" />
         <Cell value="Notes" width="flex" />
         {showCategory && <Cell value="Category" width="flex" />}
-        <Cell value="Payment" width={80} textAlign="right" />
-        <Cell value="Deposit" width={80} textAlign="right" />
+        <Cell value="Outflow" width={80} textAlign="right" />
+        <Cell value="Inflow" width={80} textAlign="right" />
         {showBalance && <Cell value="Balance" width={85} textAlign="right" />}
         <Field width={21} truncate={false} />
         <Cell value="" width={15 + styles.scrollbarWidth} />
@@ -341,7 +341,7 @@ function StatusCell({
   let props = {
     color:
       status === 'cleared'
-        ? colors.g5
+        ? colors.p6
         : status === 'missed'
         ? colors.r6
         : status === 'due'
